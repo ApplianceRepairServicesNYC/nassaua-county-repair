@@ -1,9 +1,9 @@
-# Nassau County Appliance Repair
+# Westchester County Appliance Repair
 
-Professional multi-brand appliance repair serving Nassau County, NY.
+Professional multi-brand appliance repair serving Westchester County, NY.
 
 ## Website
-https://nassaucountyrepair.com
+https://westchestercountyrepair.com
 
 ## Total Pages
 913 pages generated
@@ -18,4 +18,4 @@ Admiral, AEG, Amana, Ariston, Asko, Avantgarde, Beaumark, Bertazzoni, Blomberg, 
 Washer, Dryer, Refrigerator, Dishwasher, Oven, Cooktop, Microwave, Wine Cooler, Vent Hood
 
 ## Contact
-info@nassaucountyrepair.com
+info@westchestercountyrepair.com

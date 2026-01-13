@@ -2178,7 +2178,18 @@
             
             setupCallButton(document.getElementById('navCallNow'));
             setupCallButton(document.getElementById('formCallNow'));
-            setupCallButton(document.getElementById('heroCallNow'));
+             // heroCallNow now scrolls to form instead of showing phone
+ var heroScheduleBtn = document.getElementById('heroCallNow');
+ if (heroScheduleBtn) {
+     heroScheduleBtn.addEventListener('click', function() {
+         var formSection = document.getElementById('cfContactFormSection');
+         if (formSection) {
+             formSection.classList.add('active');
+             formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+         }
+     });
+ }
+ setupCallButton(document.getElementById('reviewsCallBtn'));
             
             const cfContactForm = document.getElementById('cfContactForm');
             if (cfContactForm) {
@@ -2389,8 +2400,6 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeAllModals();
 });
 
-// Reviews Call Button
-setupCallButton(document.getElementById('reviewsCallBtn'));
 
 </script>
 </body>

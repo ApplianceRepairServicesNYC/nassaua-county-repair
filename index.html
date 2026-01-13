@@ -2392,7 +2392,22 @@
  
  setupCallButton(document.getElementById('navCallNow'));
  setupCallButton(document.getElementById('formCallNow'));
- setupCallButton(document.getElementById('heroCallNow'));
+ setupCallButton(document.getElementById('reviewsCallBtn'));
+ 
+ // Schedule Your Repair button - scroll to form and open it
+ const heroScheduleBtn = document.getElementById('heroCallNow');
+ if (heroScheduleBtn) {
+     heroScheduleBtn.addEventListener('click', function() {
+         const formSection = document.getElementById('cfContactFormSection');
+         const scheduleSection = document.getElementById('scheduleFormContainer') || document.querySelector('.schedule-form-section');
+         if (formSection) {
+             formSection.classList.add('active');
+             formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+         } else if (scheduleSection) {
+             scheduleSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+         }
+     });
+ }
  
  const cfContactForm = document.getElementById('cfContactForm');
  if (cfContactForm) {
@@ -2658,8 +2673,6 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeAllModals();
 });
 
-// Reviews Call Button
-setupCallButton(document.getElementById('reviewsCallBtn'));
 
 </script>
 </body>

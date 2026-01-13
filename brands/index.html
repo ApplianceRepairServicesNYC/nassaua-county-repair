@@ -480,7 +480,24 @@
     }
     .read-reviews-btn:hover { background: rgba(255,255,255,0.1); }
 
-    </style>
+    
+    .hero .container .btn {
+        margin: 5px;
+    }
+    @media (max-width: 500px) {
+        .hero .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero .container .btn {
+            margin: 8px 0;
+            width: 90%;
+            max-width: 280px;
+        }
+    }
+
+</style>
 </head>
 <body>
  <header>
@@ -530,18 +547,18 @@
  <li><a href="https://nassaucountyrepair.com/ny/glen-cove/">Glen Cove</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/oyster-bay/">Oyster Bay</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/hempstead/">Hempstead</a></li>
- <li><a href="https://nassaucountyrepair.com/ny/mineola-on-hudson/">Mineola-on-Hudson</a></li>
+ <li><a href="https://nassaucountyrepair.com/ny/mineola/">Mineola-on-Hudson</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/westbury/">Westbury</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/hicksville/">Hicksville</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/levittown/">Levittown</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/manhasset/">Manhasset</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/great-neck/">Great Neck</a></li>
- <li><a href="https://nassaucountyrepair.com/ny/long-beach-manor/">Long Beach Manor</a></li>
- <li><a href="https://nassaucountyrepair.com/ny/rye/">Rye</a></li>
- <li><a href="https://nassaucountyrepair.com/ny/Valley Stream/">Valley Stream</a></li>
+ <li><a href="https://nassaucountyrepair.com/ny/long-beach/">Long Beach Manor</a></li>
+ <li><a href="https://nassaucountyrepair.com/ny/roslyn/">Rye</a></li>
+ <li><a href="https://nassaucountyrepair.com/ny/valley-stream/">Valley Stream</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/lynbrook/">Lynbrook</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/oceanside/">Oceanside</a></li>
- <li><a href="https://nassaucountyrepair.com/ny/village-of-long-beach/">Village of Long Beach</a></li>
+ <li><a href="https://nassaucountyrepair.com/ny/long-beach/">Village of Long Beach</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/garden-city/">Garden City</a></li>
  <li><a href="https://nassaucountyrepair.com/ny/hempstead/">Hempstead</a></li>
  </div>
@@ -557,7 +574,7 @@
  <div class="container">
  <h1>Appliance Brands We Repair in Nassau County, NY</h1>
  <p>Factory-Trained Technicians • 57+ Brands Serviced • Same-Day Availability</p>
- <button class="btn modal-trigger" data-modal="reviewsModal" style="background: transparent; border: 2px solid white;">★ Read Reviews</button>
+ <button class="btn modal-trigger" data-modal="reviewsModal" style="background: transparent; border: 2px solid white; margin-left: 15px;">★ Read Reviews</button>
  </div>
  </section>
 

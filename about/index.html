@@ -729,7 +729,8 @@
  <div class="container">
  <h1>About Nassau County Appliance Repair</h1>
  <p>Serving Nassau County Since 1993 • Over 30 Years of Excellence</p>
- <button class="btn modal-trigger" data-modal="reviewsModal" style="background: transparent; border: 2px solid white; margin-left: 15px;">★ Read Reviews</button>
+ <button class="btn" id="heroCallNow">Schedule Your Repair</button>
+                <button class="btn modal-trigger" data-modal="reviewsModal" style="background: transparent; border: 2px solid white; margin-left: 15px;">★ Read Reviews</button>
  </div>
  </section>
 
@@ -1028,6 +1029,14 @@
  
  setupCallButton(document.getElementById('navCallNow'));
     setupCallButton(document.getElementById('reviewsCallBtn'));
+    
+    // Schedule Your Repair button - go to contact
+    var heroScheduleBtn = document.getElementById('heroCallNow');
+    if (heroScheduleBtn) {
+        heroScheduleBtn.addEventListener('click', function() {
+            window.location.href = '/contact/';
+        });
+    }
  setupCallButton(document.getElementById('ctaCallBtn'));
  });
  </script>

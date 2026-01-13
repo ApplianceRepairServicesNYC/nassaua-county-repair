@@ -620,6 +620,8 @@
  <div class="container">
  <h1>Appliance Repair Reviews in Nassau County, NY</h1>
  <p>Real Feedback From Local Customers • Verified Service Excellence</p>
+ <button class="btn" id="heroCallNow">Schedule Your Repair</button>
+                <button class="btn modal-trigger" data-modal="reviewsModal" style="background: transparent; border: 2px solid white; margin-left: 15px;">★ Read Reviews</button>
  </div>
  </section>
 
@@ -899,22 +901,33 @@
  
  function setupCallButton(btn) {
  if (btn) {
- btn.addEventListener('click', function() {
- if (this.dataset.revealed) return;
+ btn.addEventListener('click', function(e) {
+ e.preventDefault();
+ e.stopPropagation();
+ if (this.dataset.revealed) {
+ const digits = [8, 0, 0, 3, 6, 8, 1, 9, 5, 8];
+ window.location.href = 'tel:+1' + digits.join('');
+ return;
+ }
  const digits = [8, 0, 0, 3, 6, 8, 1, 9, 5, 8];
  const num = digits.join('');
  const formatted = '+1 (' + num.slice(0,3) + ') ' + num.slice(3,6) + '-' + num.slice(6);
  this.innerHTML = formatted;
  this.dataset.revealed = 'true';
- this.onclick = function() {
- window.location.href = 'tel:+1' + num;
- };
  });
  }
  }
  
  setupCallButton(document.getElementById('navCallNow'));
     setupCallButton(document.getElementById('reviewsCallBtn'));
+    
+    // Schedule Your Repair button - scroll to contact form
+    var heroScheduleBtn = document.getElementById('heroCallNow');
+    if (heroScheduleBtn) {
+        heroScheduleBtn.addEventListener('click', function() {
+            window.location.href = '/contact/';
+        });
+    }
  });
  </script>
 

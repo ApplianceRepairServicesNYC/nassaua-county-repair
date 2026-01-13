@@ -2339,12 +2339,13 @@
  setupCallButton(document.getElementById('formCallNow'));
   // Hero button scrolls to form and opens it
  var heroCallNow = document.getElementById('heroCallNow');
- var cfContactFormSection = document.getElementById('cfContactFormSection');
- function toggleForm() { if (cfContactFormSection) cfContactFormSection.classList.toggle('active'); }
+ var scheduleFormContainer = document.getElementById('scheduleFormContainer');
+ var scheduleFormToggle = document.getElementById('scheduleFormToggle');
  if (heroCallNow) heroCallNow.addEventListener('click', function() { 
-     var container = document.getElementById('cf-schedule-container') || document.getElementById('cfContactFormSection');
-     if (container) container.scrollIntoView({behavior:'smooth'}); 
-     setTimeout(toggleForm, 500); 
+     if (scheduleFormToggle) scheduleFormToggle.scrollIntoView({behavior:'smooth', block:'center'}); 
+     setTimeout(function() { 
+         if (scheduleFormContainer) scheduleFormContainer.classList.add('active'); 
+     }, 500); 
  });
  
  // Reviews Call Button

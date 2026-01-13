@@ -1406,8 +1406,7 @@
             <h1>LG Oven Repair<br>Nassau County, NY</h1>
             <p>Same-Day Service • Factory-Trained Technicians • All Nassau County</p>
             <button class="btn" id="heroCallNow">Schedule Your Repair</button>
-                <button class="btn modal-trigger" data-modal="reviewsModal" style="background: transparent; border: 2px solid white; margin-left: 15px;">★ Read Reviews</button>
-            </div>
+                </div>
         </section>
 
 
@@ -2178,7 +2177,20 @@
             
             setupCallButton(document.getElementById('navCallNow'));
             setupCallButton(document.getElementById('formCallNow'));
-            setupCallButton(document.getElementById('heroCallNow'));
+             // heroCallNow scrolls to contact form
+ const heroBtn = document.getElementById('heroCallNow');
+ if (heroBtn) {
+     heroBtn.addEventListener('click', function() {
+         const contactForm = document.getElementById('cfContactFormSection');
+         if (contactForm) {
+             contactForm.classList.add('active');
+             contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+         }
+     });
+ }
+ 
+ // Reviews Call Button
+ setupCallButton(document.getElementById('reviewsCallBtn'));
             
             const cfContactForm = document.getElementById('cfContactForm');
             if (cfContactForm) {
@@ -2388,9 +2400,6 @@ if (modalOverlay) {
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeAllModals();
 });
-
-// Reviews Call Button
-setupCallButton(document.getElementById('reviewsCallBtn'));
 
 </script>
 </body>
